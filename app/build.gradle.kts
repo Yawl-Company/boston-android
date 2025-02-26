@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.convention.android.application)
     alias(libs.plugins.convention.android.compose)
-    alias(libs.plugins.convention.android.hilt)
+    alias(libs.plugins.convention.android.dagger)
     alias(libs.plugins.convention.android.unit.test)
     alias(libs.plugins.convention.android.ui.test)
     alias(libs.plugins.convention.signing)

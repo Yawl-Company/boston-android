@@ -33,8 +33,7 @@ kotlinxDatetime = "0.5.0"
 
 # codegen
 ksp = "2.1.0-1.0.29"
-hilt = "2.53"
-hilt-compiler = "1.2.0"
+dagger = "2.53"
 javax-inject = "1"
 
 # cache
@@ -91,8 +90,8 @@ room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 
 # di
-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+dagger-android = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
+dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
 javax-inject = { group = "javax.inject", name = "javax.inject", version.ref = "javax-inject" }
 
 # kotlinx
@@ -108,14 +107,13 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-parcelable = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 room = { id = "androidx.room", version.ref = "room" }
 gradle-secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secrets" }
 
 convention-android-application = { id = "convention.kotlin-android-app", version = "unspecified" }
 convention-android-library = { id = "convention.kotlin-android-library", version = "unspecified" }
 convention-android-compose = { id = "convention.android-compose", version = "unspecified" }
-convention-android-hilt = { id = "convention.hilt", version = "unspecified" }
+convention-android-dagger = { id = "convention.dagger", version = "unspecified" }
 convention-android-unit-test = { id = "convention.unit", version = "unspecified" }
 convention-android-ui-test = { id = "convention.ui", version = "unspecified" }
 convention-kotlin-serialization = { id = "convention.serialization", version = "unspecified" }

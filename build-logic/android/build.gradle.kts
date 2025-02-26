@@ -30,9 +30,9 @@ gradlePlugin {
             implementationClass = "com.convention.compose.AndroidComposeConventionPlugin"
         }
 
-        create("convention.hilt") {
-            id = "convention.hilt"
-            implementationClass = "com.convention.HiltConventionPlugin"
+        create("convention.dagger") {
+            id = "convention.dagger"
+            implementationClass = "com.convention.DaggerConventionPlugin"
         }
 
         create("convention.room") {
