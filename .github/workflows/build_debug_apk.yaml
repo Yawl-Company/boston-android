@@ -7,7 +7,6 @@ on:
     paths-ignore:
       - '.github/**'
       - '**.md'
-  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
