@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build_debug_apk:
+  build_release_apk:
     name: Build release apk
     runs-on: ubuntu-latest
     environment: development
