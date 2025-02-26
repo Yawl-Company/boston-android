@@ -7,14 +7,13 @@ on:
     paths-ignore:
       - '.github/**'
       - '**.md'
-  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build_debug_apk:
+  build_release_apk:
     name: Build release apk
     runs-on: ubuntu-latest
     environment: development
@@ -35,7 +34,7 @@ jobs:
         env:
           KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
         run: |
-          echo "$RELEASE_KEYSTORE_BASE64" | base64 -d > yawl.jks
+          echo "$KEYSTORE_BASE64" | base64 -d > yawl.keystore
 
       - name: Create signing.properties
         env:
@@ -44,10 +43,10 @@ jobs:
           KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
         run: |
           cat <<EOF > signing.properties
-          keystore.path=$(pwd)/yawl.jks
-          keystore.password=$RELEASE_KEYSTORE_PASSWORD
-          key.alias=$RELEASE_KEY_ALIAS
-          key.password=$RELEASE_KEY_PASSWORD
+          keystore.path=$(pwd)/yawl.keystore
+          keystore.password=$KEYSTORE_PASSWORD
+          key.alias=$KEY_ALIAS
+          key.password=$KEY_PASSWORD
           EOF
 
       - name: Assemble the project
